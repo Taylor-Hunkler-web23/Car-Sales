@@ -23,9 +23,11 @@ const initialState = {
 
 
 export const carReducer = (state = initialState, action) => {
-
+console.log (action)
     switch (action.type){
 
-
+        default:
+            return state;
     }
+
 }

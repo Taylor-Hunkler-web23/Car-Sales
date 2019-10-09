@@ -19,5 +19,12 @@ const AdditionalFeatures = props => {
   );
 };
 
+const mapStateToProps = state => {
+  return{
+    store: state.store
 
-export default AdditionalFeatures;
+  }
+}
+
+export default connect (mapStateToProps,  {}) (AdditionalFeatures)
+

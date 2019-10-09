@@ -24,7 +24,6 @@ const mapStateToProps = state => {
     car: state.car,
     feature:state.features
 
-
   }
 }
 

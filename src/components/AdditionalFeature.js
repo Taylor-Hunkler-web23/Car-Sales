@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {addFeature} from '../actions/index'
 
 const AdditionalFeature = props => {
+  console.log(props,"in")
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}

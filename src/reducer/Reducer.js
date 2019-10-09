@@ -55,13 +55,14 @@ console.log (action)
 
       return{
         ...state,
-        additionalPrice: (state.additionalPrice -= action.payload),
+        additionalPrice: (state.additionalPrice -= action.payload.price),
         car: {
           ...state.car,
           features: state.car.features.filter(
             feature => feature.id !== action.payload.id
           )
-        }
+        },
+        
       }
 
         default:

@@ -34,6 +34,7 @@ console.log (action)
 
       return{
         ...state,
+
         car: {
           ...state.car,
           features: [...state.car.features, action.payload]},
@@ -53,7 +54,14 @@ console.log (action)
       case REMOVE_FEATURE:
 
       return{
-        ...state
+        ...state,
+        additionalPrice: (state.additionalPrice -= action.payload),
+        car: {
+          ...state.car,
+          features: state.car.features.filter(
+            feature => feature.id !== action.payload.id
+          )
+        }
       }
 
         default:
